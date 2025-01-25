@@ -1,35 +1,3 @@
-// import React from 'react'
-// import './Buttons.css'
-// import { Assets } from '../../Assets'
-
-// const Buttons = () => {
-//   return (
-//     <div className='button-container'
-//     style={{
-//         backgroundImage:`url(${Assets.buttonbg})`,
-//         backgroundSize: "cover",
-//         backgroundPosition: "center",
-//         backgroundRepeat: "no-repeat",
-//     }} 
-//     >
-//         <div className='buttons'>
-//             <button>FOOD</button>
-//             <button>DRINKS</button>
-//             <button>BRUNCH</button>
-//         </div>
-      
-//     </div>
-//   )
-// }
-
-// export default Buttons
-
-
-
-
-
-
-
 
 import React, { useState } from 'react';
 import './Buttons.css';
