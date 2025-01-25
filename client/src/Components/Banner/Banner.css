@@ -16,6 +16,7 @@
     font-size: 75px;
     font-weight: 400;
     color: #FFFFFF;
+    text-shadow: 4px 3px 0px #800020;
     /* box-shadow: 2px 4px 6px #800020; */
 }
 .banner-text span{
