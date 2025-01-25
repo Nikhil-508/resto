@@ -70,88 +70,85 @@ const Main = ({ selectedCategory }) => {
 
   return (
     <div
-      className="main-container"
-      style={{
-        backgroundImage: `url(${Assets.mainBg})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
-      <div className="menu-items">
-        {/* Title Section */}
-        <div className="title-section">
-          <img src={Assets.line} alt="" />
-          <h1>{selectedCategory}</h1>
-          <img src={Assets.line} alt="" />
-        </div>
-
-        {/* Render Menu Items dynamically */}
-
-        {menuItems.length > 0 ? (
-             <div className="menu-grid">
-            {menuItems.map((item) => (
-                <div className="menuitem-container">
-                <div className="single-menu" key={item._id}>
-              <h3>{item.name}..........................${item.price}</h3>
-              <span>{item.description}</span>
+    className="main-container"
+    style={{
+      backgroundImage: `url(${Assets.mainBg})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    }}
+  >
+    <div className="menu-items">
+      <div className="title-section">
+        <img src={Assets.line} alt="" />
+        <h1>{selectedCategory}</h1>
+        <img src={Assets.line} alt="" />
+      </div>
+      {menuItems.length > 0 ? (
+        <div className="menu-grid">
+          {menuItems.map((item) => (
+            <div className="menuitem-container" key={item._id}>
+              <div className="single-menu">
+                <h3>
+                  {item.name}..........................${item.price}
+                </h3>
+                <span>{item.description}</span>
+              </div>
             </div>
-        </div>
           ))}
-          </div>
-        ) : (
-            <p>No items available in this category</p>
-        )}
         </div>
-
-        <button
-          className="add-menu-btn"
-          onClick={() => setShowForm(true)} // Show form when button is clicked
-        >
-          + Add Menu Item
-        </button>
-
-        {showForm && (
-          <form className="add-menu-form" onSubmit={handleFormSubmit}>
-            <h2>Add New Menu Item</h2>
-            <label>
-              Name:
-              <input
-                type="text"
-                name="name"
-                value={menuItemData.name}
-                onChange={handleInputChange}
-                required
-              />
-            </label>
-            <label>
-              Description:
-              <textarea
-                name="description"
-                value={menuItemData.description}
-                onChange={handleInputChange}
-                required
-              />
-            </label>
-            <label>
-              Price:
-              <input
-                type="number"
-                name="price"
-                value={menuItemData.price}
-                onChange={handleInputChange}
-                required
-              />
-            </label>
-            <div className="form-actions">
-              <button type="submit">Save Menu Item</button>
-              <button type="button" onClick={() => setShowForm(false)}>
-                Cancel
-              </button>
-            </div>
-          </form>
-        )}
+      ) : (
+        <p>No items available in this category</p>
+      )}
     </div>
+    <button
+      className="add-menu-btn"
+      onClick={() => setShowForm(true)} // Show form when button is clicked
+    >
+      + Add Menu Item
+    </button>
+    {showForm && (
+      <form className="add-menu-form" onSubmit={handleFormSubmit}>
+        <h2>Add New Menu Item</h2>
+        <label>
+          Name:
+          <input
+            type="text"
+            name="name"
+            value={menuItemData.name}
+            onChange={handleInputChange}
+            required
+          />
+        </label>
+        <label>
+          Description:
+          <textarea
+            name="description"
+            value={menuItemData.description}
+            onChange={handleInputChange}
+            required
+          />
+        </label>
+        <label>
+          Price:
+          <input
+            type="number"
+            name="price"
+            value={menuItemData.price}
+            onChange={handleInputChange}
+            required
+          />
+        </label>
+        <div className="form-actions">
+          <button type="submit">Save Menu Item</button>
+          <button type="button" onClick={() => setShowForm(false)}>
+            Cancel
+          </button>
+        </div>
+      </form>
+    )}
+  </div>
+  
   );
 };
 
