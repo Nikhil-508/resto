@@ -20,6 +20,14 @@ const Main = ({ selectedCategory }) => {
     category: selectedCategory, 
   });
 
+  useEffect(() => {
+    setMenuItemData((prevData) => ({
+      ...prevData,
+      category: selectedCategory, // Update category whenever selectedCategory changes
+    }));
+  }, [selectedCategory]);
+  
+
   
   const fetchMenuItems = async (category) => {
     try {

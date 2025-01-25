@@ -17,7 +17,7 @@ const Footer = () => {
             </div>
         </div>
         <div className='single-box'>
-            <img className='logo' src={Assets.brandname} alt="" />
+            <img className='brandName' src={Assets.brandname} alt="" />
             <ul className='social'>
                 <li><img src={Assets.twit} alt="" /></li>
                 <li><img src={Assets.ytbe} alt="" /></li>

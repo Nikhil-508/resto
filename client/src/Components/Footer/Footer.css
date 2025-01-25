@@ -17,7 +17,9 @@
     gap: 10px;
     border: 1px solid #FFFFFF;
     border-radius: 15px;
-    padding: 18px;
+    padding: 20px;
+    padding-left: 80px;
+    padding-right: 80px;
 }
 .single-box h1{
     font-family: "Oswald", serif;
@@ -40,7 +42,7 @@
     width: 18px;
     height: 16.95px;
 }
-.logo{
+.brandName{
     width: 185px;
     height: 49px;
 }
