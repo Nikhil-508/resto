@@ -4,6 +4,7 @@ import './Buttons.css';
 import { Assets } from '../../Assets';
 
 const Buttons = ({ onCategorySelect }) => {
+  
   const [selectedCategory, setSelectedCategory] = useState('FOOD'); // Default selected category
 
   // Handle button click to set the selected category
